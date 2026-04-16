@@ -1,0 +1,31 @@
+# ByteTrack tracker config (classroom-tuned)
+# 说明：本配置用于提升远处/小目标的保留与遮挡恢复能力。
+# 使用方法：在运行 ca_gpu.py 时通过 --tracker 指定此文件路径。
+# 例如：
+#   python classroom_attention/ca_gpu.py D:/video.mp4 --save-video \
+#       --conf 0.25 --imgsz 1280 \
+#       --tracker d:/smart_classroom/classroom_attention/trackers/bytetrack.yaml
+
+# 跟踪器类型（Ultralytics 支持：bytetrack、botsort 等）
+tracker_type: bytetrack
+
+# 检测阈值（用于跟踪阶段的候选过滤；越低越保留弱目标，误报也可能增多）
+conf_thres: 0.10
+
+# 启动/维持轨迹所需的检测置信度（建议略低于或接近 conf_thres）
+track_thresh: 0.25
+
+# 关联匹配的 IoU 阈值（越高越保守，越低越容易产生错配）
+match_thresh: 0.85
+
+# 轨迹缓冲帧数（越大越能跨遮挡保持 ID，但也可能延迟清除假轨迹）
+track_buffer: 60
+
+# 最小框面积（像素）—允许更小的目标被跟踪；课堂远处学生建议设得更小
+min_box_area: 5
+
+# 视频帧率（作为内部时序参考；如有需要可以调整为你的真实 FPS）
+frame_rate: 30
+
+# 针对 MOT20 数据集的特殊模式（课堂场景设为 false）
+mot20: false

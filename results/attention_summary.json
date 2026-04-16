@@ -1,0 +1,1539 @@
+{
+  "video": {
+    "video_path": "/root/autodl-tmp/classroom.mp4",
+    "fps": 30.0,
+    "total_frames": 6836,
+    "width": 1758,
+    "height": 1080,
+    "duration_sec": 227.87,
+    "skip_frames": 2,
+    "attention_threshold": 85
+  },
+  "overview": {
+    "students_with_not_focus_events": 16,
+    "not_focus_record_count": 1830,
+    "not_focus_event_count": 23,
+    "raise_hand_event_count": 80,
+    "top_students": [
+      {
+        "student_id": 2,
+        "event_count": 4,
+        "total_duration_sec": 56.6
+      },
+      {
+        "student_id": 68,
+        "event_count": 3,
+        "total_duration_sec": 55.4
+      },
+      {
+        "student_id": 79,
+        "event_count": 2,
+        "total_duration_sec": 15.0
+      },
+      {
+        "student_id": 88,
+        "event_count": 1,
+        "total_duration_sec": 9.6
+      },
+      {
+        "student_id": 66,
+        "event_count": 2,
+        "total_duration_sec": 9.1
+      },
+      {
+        "student_id": 23,
+        "event_count": 1,
+        "total_duration_sec": 6.4
+      },
+      {
+        "student_id": 67,
+        "event_count": 1,
+        "total_duration_sec": 5.4
+      },
+      {
+        "student_id": 73,
+        "event_count": 1,
+        "total_duration_sec": 4.9
+      },
+      {
+        "student_id": 56,
+        "event_count": 1,
+        "total_duration_sec": 4.4
+      },
+      {
+        "student_id": 26,
+        "event_count": 1,
+        "total_duration_sec": 4.2
+      }
+    ]
+  },
+  "students": [
+    {
+      "student_id": 2,
+      "event_count": 4,
+      "total_duration_sec": 56.6,
+      "dominant_reasons": [
+        {
+          "reason": "Hand low",
+          "count": 213
+        },
+        {
+          "reason": "Leaning(36deg)",
+          "count": 39
+        },
+        {
+          "reason": "Leaning(29deg)",
+          "count": 32
+        },
+        {
+          "reason": "Leaning(30deg)",
+          "count": 32
+        },
+        {
+          "reason": "Leaning(35deg)",
+          "count": 30
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:00:44",
+          "end": "0:01:29",
+          "duration_sec": 44.7,
+          "main_reason": "Hand low",
+          "midpoint_sec": 66.7,
+          "midpoint_frame": 2001,
+          "score": 80,
+          "bbox": "(20, 604, 259, 1073)"
+        },
+        {
+          "event_index": 2,
+          "start": "0:02:14",
+          "end": "0:02:17",
+          "duration_sec": 3.2,
+          "main_reason": "Leaning(36deg)",
+          "midpoint_sec": 135.7,
+          "midpoint_frame": 4071,
+          "score": 80,
+          "bbox": "(904, 365, 1046, 874)"
+        },
+        {
+          "event_index": 3,
+          "start": "0:03:26",
+          "end": "0:03:32",
+          "duration_sec": 6.4,
+          "main_reason": "Leaning(29deg)",
+          "midpoint_sec": 209.05,
+          "midpoint_frame": 6264,
+          "score": 80,
+          "bbox": "(820, 274, 948, 681)"
+        },
+        {
+          "event_index": 4,
+          "start": "0:03:41",
+          "end": "0:03:43",
+          "duration_sec": 2.3,
+          "main_reason": "Leaning(27deg)",
+          "midpoint_sec": 222.15,
+          "midpoint_frame": 6657,
+          "score": 80,
+          "bbox": "(1004, 685, 1204, 1074)"
+        }
+      ]
+    },
+    {
+      "student_id": 23,
+      "event_count": 1,
+      "total_duration_sec": 6.4,
+      "dominant_reasons": [
+        {
+          "reason": "Leaning(85deg)",
+          "count": 7
+        },
+        {
+          "reason": "Leaning(84deg)",
+          "count": 5
+        },
+        {
+          "reason": "Leaning(44deg)",
+          "count": 3
+        },
+        {
+          "reason": "Leaning(32deg)",
+          "count": 2
+        },
+        {
+          "reason": "Leaning(34deg)",
+          "count": 2
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:00:09",
+          "end": "0:00:15",
+          "duration_sec": 6.4,
+          "main_reason": "Leaning(85deg)",
+          "midpoint_sec": 12.1,
+          "midpoint_frame": 366,
+          "score": 80,
+          "bbox": "(2, 763, 145, 1073)"
+        }
+      ]
+    },
+    {
+      "student_id": 26,
+      "event_count": 1,
+      "total_duration_sec": 4.2,
+      "dominant_reasons": [
+        {
+          "reason": "Hand low",
+          "count": 28
+        },
+        {
+          "reason": "Leaning(36deg)",
+          "count": 6
+        },
+        {
+          "reason": "Leaning(37deg)",
+          "count": 6
+        },
+        {
+          "reason": "Leaning(40deg)",
+          "count": 6
+        },
+        {
+          "reason": "Leaning(41deg)",
+          "count": 5
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:00:27",
+          "end": "0:00:31",
+          "duration_sec": 4.2,
+          "main_reason": "Hand low",
+          "midpoint_sec": 28.85,
+          "midpoint_frame": 867,
+          "score": 80,
+          "bbox": "(12, 698, 187, 1074)"
+        }
+      ]
+    },
+    {
+      "student_id": 30,
+      "event_count": 1,
+      "total_duration_sec": 3.4,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 10
+        },
+        {
+          "reason": "Leaning(29deg)",
+          "count": 4
+        },
+        {
+          "reason": "Leaning(33deg)",
+          "count": 4
+        },
+        {
+          "reason": "Leaning(25deg)",
+          "count": 3
+        },
+        {
+          "reason": "Leaning(28deg)",
+          "count": 3
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:02:20",
+          "end": "0:02:23",
+          "duration_sec": 3.4,
+          "main_reason": "Leaning(33deg)",
+          "midpoint_sec": 141.75,
+          "midpoint_frame": 4254,
+          "score": 80,
+          "bbox": "(1054, 409, 1216, 664)"
+        }
+      ]
+    },
+    {
+      "student_id": 42,
+      "event_count": 1,
+      "total_duration_sec": 3.3,
+      "dominant_reasons": [
+        {
+          "reason": "Leaning(25deg)",
+          "count": 10
+        },
+        {
+          "reason": "Leaning(27deg)",
+          "count": 4
+        },
+        {
+          "reason": "Leaning(26deg)",
+          "count": 3
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:01:24",
+          "end": "0:01:27",
+          "duration_sec": 3.3,
+          "main_reason": "Leaning(25deg)",
+          "midpoint_sec": 85.25,
+          "midpoint_frame": 2559,
+          "score": 80,
+          "bbox": "(1335, 660, 1532, 914)"
+        }
+      ]
+    },
+    {
+      "student_id": 56,
+      "event_count": 1,
+      "total_duration_sec": 4.4,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 57
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:02:17",
+          "end": "0:02:22",
+          "duration_sec": 4.4,
+          "main_reason": "Head down",
+          "midpoint_sec": 139.85,
+          "midpoint_frame": 4194,
+          "score": 70,
+          "bbox": "(1343, 681, 1557, 832)"
+        }
+      ]
+    },
+    {
+      "student_id": 62,
+      "event_count": 1,
+      "total_duration_sec": 3.1,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 35
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:03:25",
+          "end": "0:03:28",
+          "duration_sec": 3.1,
+          "main_reason": "Head down",
+          "midpoint_sec": 206.65,
+          "midpoint_frame": 6201,
+          "score": 70,
+          "bbox": "(13, 702, 215, 897)"
+        }
+      ]
+    },
+    {
+      "student_id": 66,
+      "event_count": 2,
+      "total_duration_sec": 9.1,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 68
+        },
+        {
+          "reason": "Hand low",
+          "count": 6
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:02:01",
+          "end": "0:02:07",
+          "duration_sec": 5.5,
+          "main_reason": "Head down",
+          "midpoint_sec": 124.3,
+          "midpoint_frame": 3729,
+          "score": 55,
+          "bbox": "(494, 584, 639, 696)"
+        },
+        {
+          "event_index": 2,
+          "start": "0:02:13",
+          "end": "0:02:16",
+          "duration_sec": 3.6,
+          "main_reason": "Head down",
+          "midpoint_sec": 134.5,
+          "midpoint_frame": 4035,
+          "score": 70,
+          "bbox": "(494, 587, 638, 698)"
+        }
+      ]
+    },
+    {
+      "student_id": 67,
+      "event_count": 1,
+      "total_duration_sec": 5.4,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 54
+        },
+        {
+          "reason": "Hand low",
+          "count": 6
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:01:48",
+          "end": "0:01:54",
+          "duration_sec": 5.4,
+          "main_reason": "Head down",
+          "midpoint_sec": 111.3,
+          "midpoint_frame": 3339,
+          "score": 70,
+          "bbox": "(262, 375, 403, 488)"
+        }
+      ]
+    },
+    {
+      "student_id": 68,
+      "event_count": 3,
+      "total_duration_sec": 55.4,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 447
+        },
+        {
+          "reason": "Hand low",
+          "count": 70
+        },
+        {
+          "reason": "Long head down(5.1s)",
+          "count": 6
+        },
+        {
+          "reason": "Long head down(5.2s)",
+          "count": 6
+        },
+        {
+          "reason": "Long head down(5.3s)",
+          "count": 6
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:01:49",
+          "end": "0:02:13",
+          "duration_sec": 24.4,
+          "main_reason": "Head down",
+          "midpoint_sec": 121.15,
+          "midpoint_frame": 3636,
+          "score": 55,
+          "bbox": "(233, 465, 349, 597)"
+        },
+        {
+          "event_index": 2,
+          "start": "0:02:29",
+          "end": "0:02:56",
+          "duration_sec": 26.7,
+          "main_reason": "Head down",
+          "midpoint_sec": 162.8,
+          "midpoint_frame": 4884,
+          "score": 70,
+          "bbox": "(202, 465, 343, 589)"
+        },
+        {
+          "event_index": 3,
+          "start": "0:03:24",
+          "end": "0:03:29",
+          "duration_sec": 4.3,
+          "main_reason": "Head down",
+          "midpoint_sec": 206.85,
+          "midpoint_frame": 6192,
+          "score": 70,
+          "bbox": "(223, 437, 347, 598)"
+        }
+      ]
+    },
+    {
+      "student_id": 69,
+      "event_count": 1,
+      "total_duration_sec": 3.7,
+      "dominant_reasons": [
+        {
+          "reason": "Leaning(25deg)",
+          "count": 5
+        },
+        {
+          "reason": "Leaning(26deg)",
+          "count": 4
+        },
+        {
+          "reason": "Leaning(32deg)",
+          "count": 4
+        },
+        {
+          "reason": "Leaning(31deg)",
+          "count": 3
+        },
+        {
+          "reason": "Leaning(36deg)",
+          "count": 3
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:02:21",
+          "end": "0:02:25",
+          "duration_sec": 3.7,
+          "main_reason": "Leaning(32deg)",
+          "midpoint_sec": 143.4,
+          "midpoint_frame": 4302,
+          "score": 80,
+          "bbox": "(1265, 452, 1395, 658)"
+        }
+      ]
+    },
+    {
+      "student_id": 73,
+      "event_count": 1,
+      "total_duration_sec": 4.9,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 32
+        },
+        {
+          "reason": "Leaning(25deg)",
+          "count": 1
+        },
+        {
+          "reason": "Leaning(26deg)",
+          "count": 1
+        },
+        {
+          "reason": "Leaning(27deg)",
+          "count": 1
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:02:17",
+          "end": "0:02:22",
+          "duration_sec": 4.9,
+          "main_reason": "Head down",
+          "midpoint_sec": 139.7,
+          "midpoint_frame": 4155,
+          "score": 70,
+          "bbox": "(371, 722, 636, 937)"
+        }
+      ]
+    },
+    {
+      "student_id": 78,
+      "event_count": 1,
+      "total_duration_sec": 2.4,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 36
+        },
+        {
+          "reason": "Hand low",
+          "count": 4
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:01:58",
+          "end": "0:02:00",
+          "duration_sec": 2.4,
+          "main_reason": "Head down",
+          "midpoint_sec": 119.05,
+          "midpoint_frame": 3573,
+          "score": 70,
+          "bbox": "(52, 448, 174, 587)"
+        }
+      ]
+    },
+    {
+      "student_id": 79,
+      "event_count": 2,
+      "total_duration_sec": 15.0,
+      "dominant_reasons": [
+        {
+          "reason": "Leaning(25deg)",
+          "count": 22
+        },
+        {
+          "reason": "Leaning(26deg)",
+          "count": 18
+        },
+        {
+          "reason": "Leaning(27deg)",
+          "count": 14
+        },
+        {
+          "reason": "Leaning(30deg)",
+          "count": 12
+        },
+        {
+          "reason": "Leaning(31deg)",
+          "count": 10
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:02:23",
+          "end": "0:02:26",
+          "duration_sec": 2.9,
+          "main_reason": "Leaning(46deg)",
+          "midpoint_sec": 144.6,
+          "midpoint_frame": 4338,
+          "score": 80,
+          "bbox": "(635, 654, 874, 868)"
+        },
+        {
+          "event_index": 2,
+          "start": "0:03:02",
+          "end": "0:03:14",
+          "duration_sec": 12.1,
+          "main_reason": "Leaning(25deg)",
+          "midpoint_sec": 188.05,
+          "midpoint_frame": 5616,
+          "score": 80,
+          "bbox": "(751, 657, 926, 866)"
+        }
+      ]
+    },
+    {
+      "student_id": 80,
+      "event_count": 1,
+      "total_duration_sec": 2.1,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 51
+        },
+        {
+          "reason": "Hand low",
+          "count": 25
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:02:02",
+          "end": "0:02:04",
+          "duration_sec": 2.1,
+          "main_reason": "Head down",
+          "midpoint_sec": 123.3,
+          "midpoint_frame": 3699,
+          "score": 55,
+          "bbox": "(133, 398, 249, 495)"
+        }
+      ]
+    },
+    {
+      "student_id": 88,
+      "event_count": 1,
+      "total_duration_sec": 9.6,
+      "dominant_reasons": [
+        {
+          "reason": "Head down",
+          "count": 97
+        },
+        {
+          "reason": "Hand low",
+          "count": 9
+        }
+      ],
+      "event_ranges": [
+        {
+          "event_index": 1,
+          "start": "0:01:59",
+          "end": "0:02:09",
+          "duration_sec": 9.6,
+          "main_reason": "Head down",
+          "midpoint_sec": 124.25,
+          "midpoint_frame": 3726,
+          "score": 70,
+          "bbox": "(280, 384, 403, 488)"
+        }
+      ]
+    }
+  ],
+  "keyframe_candidates": [
+    {
+      "student_id": 2,
+      "priority": 44.7,
+      "time_sec": 66.7,
+      "frame": 2001,
+      "reason": "Hand low",
+      "score": 80,
+      "bbox": "(20, 604, 259, 1073)",
+      "bbox_area": 112091
+    },
+    {
+      "student_id": 68,
+      "priority": 26.7,
+      "time_sec": 162.8,
+      "frame": 4884,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(202, 465, 343, 589)",
+      "bbox_area": 17484
+    },
+    {
+      "student_id": 68,
+      "priority": 24.4,
+      "time_sec": 121.15,
+      "frame": 3636,
+      "reason": "Head down",
+      "score": 55,
+      "bbox": "(233, 465, 349, 597)",
+      "bbox_area": 15312
+    },
+    {
+      "student_id": 79,
+      "priority": 12.1,
+      "time_sec": 188.05,
+      "frame": 5616,
+      "reason": "Leaning(25deg)",
+      "score": 80,
+      "bbox": "(751, 657, 926, 866)",
+      "bbox_area": 36575
+    },
+    {
+      "student_id": 88,
+      "priority": 9.6,
+      "time_sec": 124.25,
+      "frame": 3726,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(280, 384, 403, 488)",
+      "bbox_area": 12792
+    },
+    {
+      "student_id": 2,
+      "priority": 6.4,
+      "time_sec": 209.05,
+      "frame": 6264,
+      "reason": "Leaning(29deg)",
+      "score": 80,
+      "bbox": "(820, 274, 948, 681)",
+      "bbox_area": 52096
+    },
+    {
+      "student_id": 23,
+      "priority": 6.4,
+      "time_sec": 12.1,
+      "frame": 366,
+      "reason": "Leaning(85deg)",
+      "score": 80,
+      "bbox": "(2, 763, 145, 1073)",
+      "bbox_area": 44330
+    },
+    {
+      "student_id": 66,
+      "priority": 5.5,
+      "time_sec": 124.3,
+      "frame": 3729,
+      "reason": "Head down",
+      "score": 55,
+      "bbox": "(494, 584, 639, 696)",
+      "bbox_area": 16240
+    },
+    {
+      "student_id": 67,
+      "priority": 5.4,
+      "time_sec": 111.3,
+      "frame": 3339,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(262, 375, 403, 488)",
+      "bbox_area": 15933
+    },
+    {
+      "student_id": 73,
+      "priority": 4.9,
+      "time_sec": 139.7,
+      "frame": 4155,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(371, 722, 636, 937)",
+      "bbox_area": 56975
+    },
+    {
+      "student_id": 56,
+      "priority": 4.4,
+      "time_sec": 139.85,
+      "frame": 4194,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(1343, 681, 1557, 832)",
+      "bbox_area": 32314
+    },
+    {
+      "student_id": 68,
+      "priority": 4.3,
+      "time_sec": 206.85,
+      "frame": 6192,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(223, 437, 347, 598)",
+      "bbox_area": 19964
+    },
+    {
+      "student_id": 26,
+      "priority": 4.2,
+      "time_sec": 28.85,
+      "frame": 867,
+      "reason": "Hand low",
+      "score": 80,
+      "bbox": "(12, 698, 187, 1074)",
+      "bbox_area": 65800
+    },
+    {
+      "student_id": 69,
+      "priority": 3.7,
+      "time_sec": 143.4,
+      "frame": 4302,
+      "reason": "Leaning(32deg)",
+      "score": 80,
+      "bbox": "(1265, 452, 1395, 658)",
+      "bbox_area": 26780
+    },
+    {
+      "student_id": 66,
+      "priority": 3.6,
+      "time_sec": 134.5,
+      "frame": 4035,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(494, 587, 638, 698)",
+      "bbox_area": 15984
+    },
+    {
+      "student_id": 30,
+      "priority": 3.4,
+      "time_sec": 141.75,
+      "frame": 4254,
+      "reason": "Leaning(33deg)",
+      "score": 80,
+      "bbox": "(1054, 409, 1216, 664)",
+      "bbox_area": 41310
+    },
+    {
+      "student_id": 42,
+      "priority": 3.3,
+      "time_sec": 85.25,
+      "frame": 2559,
+      "reason": "Leaning(25deg)",
+      "score": 80,
+      "bbox": "(1335, 660, 1532, 914)",
+      "bbox_area": 50038
+    },
+    {
+      "student_id": 2,
+      "priority": 3.2,
+      "time_sec": 135.7,
+      "frame": 4071,
+      "reason": "Leaning(36deg)",
+      "score": 80,
+      "bbox": "(904, 365, 1046, 874)",
+      "bbox_area": 72278
+    },
+    {
+      "student_id": 62,
+      "priority": 3.1,
+      "time_sec": 206.65,
+      "frame": 6201,
+      "reason": "Head down",
+      "score": 70,
+      "bbox": "(13, 702, 215, 897)",
+      "bbox_area": 39390
+    },
+    {
+      "student_id": 79,
+      "priority": 2.9,
+      "time_sec": 144.6,
+      "frame": 4338,
+      "reason": "Leaning(46deg)",
+      "score": 80,
+      "bbox": "(635, 654, 874, 868)",
+      "bbox_area": 51146
+    }
+  ],
+  "raise_hand_events": [
+    {
+      "student_id": 22,
+      "time_sec": 26.0,
+      "time_str": "0:00:26",
+      "frame": 780,
+      "event": "raise_hand",
+      "bbox": [
+        1230,
+        297,
+        1331,
+        414
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.1,
+      "time_str": "0:00:26",
+      "frame": 783,
+      "event": "raise_hand",
+      "bbox": [
+        1230,
+        296,
+        1331,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.2,
+      "time_str": "0:00:26",
+      "frame": 786,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1330,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.3,
+      "time_str": "0:00:26",
+      "frame": 789,
+      "event": "raise_hand",
+      "bbox": [
+        1230,
+        296,
+        1331,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.4,
+      "time_str": "0:00:26",
+      "frame": 792,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1331,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.5,
+      "time_str": "0:00:26",
+      "frame": 795,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1331,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.6,
+      "time_str": "0:00:26",
+      "frame": 798,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1331,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.7,
+      "time_str": "0:00:26",
+      "frame": 801,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        296,
+        1332,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.8,
+      "time_str": "0:00:26",
+      "frame": 804,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        297,
+        1333,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 26.9,
+      "time_str": "0:00:26",
+      "frame": 807,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        297,
+        1333,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.0,
+      "time_str": "0:00:27",
+      "frame": 810,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        297,
+        1333,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.1,
+      "time_str": "0:00:27",
+      "frame": 813,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        297,
+        1334,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.2,
+      "time_str": "0:00:27",
+      "frame": 816,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        297,
+        1334,
+        414
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.3,
+      "time_str": "0:00:27",
+      "frame": 819,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        297,
+        1335,
+        414
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.4,
+      "time_str": "0:00:27",
+      "frame": 822,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        297,
+        1335,
+        414
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.5,
+      "time_str": "0:00:27",
+      "frame": 825,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        297,
+        1335,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.6,
+      "time_str": "0:00:27",
+      "frame": 828,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1336,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.7,
+      "time_str": "0:00:27",
+      "frame": 831,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1336,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.8,
+      "time_str": "0:00:27",
+      "frame": 834,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1337,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 27.9,
+      "time_str": "0:00:27",
+      "frame": 837,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1337,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.0,
+      "time_str": "0:00:28",
+      "frame": 840,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1337,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.1,
+      "time_str": "0:00:28",
+      "frame": 843,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1337,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.2,
+      "time_str": "0:00:28",
+      "frame": 846,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1337,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.3,
+      "time_str": "0:00:28",
+      "frame": 849,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1337,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.4,
+      "time_str": "0:00:28",
+      "frame": 852,
+      "event": "raise_hand",
+      "bbox": [
+        1233,
+        296,
+        1338,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.5,
+      "time_str": "0:00:28",
+      "frame": 855,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        296,
+        1337,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.6,
+      "time_str": "0:00:28",
+      "frame": 858,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        296,
+        1336,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.7,
+      "time_str": "0:00:28",
+      "frame": 861,
+      "event": "raise_hand",
+      "bbox": [
+        1232,
+        296,
+        1336,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.8,
+      "time_str": "0:00:28",
+      "frame": 864,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1336,
+        411
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 28.9,
+      "time_str": "0:00:28",
+      "frame": 867,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1336,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.0,
+      "time_str": "0:00:29",
+      "frame": 870,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1336,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.1,
+      "time_str": "0:00:29",
+      "frame": 873,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1335,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.2,
+      "time_str": "0:00:29",
+      "frame": 876,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1336,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.3,
+      "time_str": "0:00:29",
+      "frame": 879,
+      "event": "raise_hand",
+      "bbox": [
+        1231,
+        296,
+        1335,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.4,
+      "time_str": "0:00:29",
+      "frame": 882,
+      "event": "raise_hand",
+      "bbox": [
+        1230,
+        296,
+        1334,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.5,
+      "time_str": "0:00:29",
+      "frame": 885,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1333,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.6,
+      "time_str": "0:00:29",
+      "frame": 888,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1333,
+        412
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.7,
+      "time_str": "0:00:29",
+      "frame": 891,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1332,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.8,
+      "time_str": "0:00:29",
+      "frame": 894,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        297,
+        1331,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 29.9,
+      "time_str": "0:00:29",
+      "frame": 897,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        297,
+        1330,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.0,
+      "time_str": "0:00:30",
+      "frame": 900,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        297,
+        1330,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.1,
+      "time_str": "0:00:30",
+      "frame": 903,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        297,
+        1330,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.2,
+      "time_str": "0:00:30",
+      "frame": 906,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1330,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.3,
+      "time_str": "0:00:30",
+      "frame": 909,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1329,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.4,
+      "time_str": "0:00:30",
+      "frame": 912,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1329,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.5,
+      "time_str": "0:00:30",
+      "frame": 915,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        296,
+        1329,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.6,
+      "time_str": "0:00:30",
+      "frame": 918,
+      "event": "raise_hand",
+      "bbox": [
+        1229,
+        295,
+        1328,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.7,
+      "time_str": "0:00:30",
+      "frame": 921,
+      "event": "raise_hand",
+      "bbox": [
+        1230,
+        295,
+        1329,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.8,
+      "time_str": "0:00:30",
+      "frame": 924,
+      "event": "raise_hand",
+      "bbox": [
+        1230,
+        295,
+        1329,
+        413
+      ]
+    },
+    {
+      "student_id": 22,
+      "time_sec": 30.9,
+      "time_str": "0:00:30",
+      "frame": 927,
+      "event": "raise_hand",
+      "bbox": [
+        1230,
+        295,
+        1329,
+        413
+      ]
+    }
+  ]
+}

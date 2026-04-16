@@ -1,0 +1,203 @@
+root@autodl-container-2zudkwgkkd-48a5cdd2:~/autodl-tmp# python ca_gpu.py --help
+usage: ca_gpu.py [-h] [--threshold THRESHOLD] [--skip-frames SKIP_FRAMES] [--save-video] [--no-labels] [-o OUTPUT] [--export-json]
+                 [--json-output JSON_OUTPUT] [--max-frames MAX_FRAMES] [--conf CONF] [--imgsz IMGSZ] [--iou IOU] [--max-det MAX_DET]
+                 [--agnostic-nms] [--no-half] [--kpt-vis KPT_VIS] [--model MODEL] [--device DEVICE] [--tracker TRACKER]
+                 [--disable-stillness] [--enable-stillness] [--min-range-sec MIN_RANGE_SEC] [--min-total-sec MIN_TOTAL_SEC]
+                 [--min-events MIN_EVENTS] [--font FONT] [--raise-delta RAISE_DELTA] [--raise-duration RAISE_DURATION]
+                 [--raise-vis RAISE_VIS]
+                 video_path
+
+课堂专注度检测 v2.0 (增强版)
+
+positional arguments:
+  video_path            输入视频文件路径
+
+options:
+  -h, --help            show this help message and exit
+  --threshold THRESHOLD
+                        专注度阈值(0-100), 默认40
+  --skip-frames SKIP_FRAMES
+                        跳帧数(默认2)
+  --save-video          保存标注后的视频文件
+  --no-labels           不在视频上显示文字标签
+  -o OUTPUT, --output OUTPUT
+                        输出视频路径(默认: output_annotated.mp4)
+  --export-json         Export structured summary JSON for LLM reporting
+  --json-output JSON_OUTPUT
+                        Structured JSON output path (default: attention_summary.json)
+  --max-frames MAX_FRAMES
+                        最大处理帧数(0=全部), 用于测试
+  --conf CONF           YOLO检测置信度阈值(0-1)，默认0.25
+  --imgsz IMGSZ         YOLO输入尺寸(imgsz)，默认1280
+  --iou IOU             NMS IoU阈值(默认0.5)
+  --max-det MAX_DET     每帧最大检测数量(默认300)
+  --agnostic-nms        启用类无关NMS(默认关闭)
+  --no-half             禁用FP16推理(默认启用，CUDA下生效)
+  --kpt-vis KPT_VIS     关键点可见性阈值(默认0.45)
+  --model MODEL         姿态模型权重文件路径，默认 yolov8m-pose.pt
+  --device DEVICE       CUDA设备索引，CPU请设为 -1，默认0
+  --tracker TRACKER     跟踪器配置文件，默认 bytetrack.yaml
+  --disable-stillness   禁用“发呆”检测（默认已禁用；兼容旧参数）
+  --enable-stillness    启用“发呆”检测（默认关闭）
+  --min-range-sec MIN_RANGE_SEC
+                        合并后的不专注时间段最小时长(默认2.0秒)
+  --min-total-sec MIN_TOTAL_SEC
+                        学生累计不专注总时长下限(默认3.0秒)
+  --min-events MIN_EVENTS
+                        学生最小不专注时间段数量(默认1)
+  --font FONT           用于中文显示的字体路径(默认Windows黑体simhei.ttf)
+  --raise-delta RAISE_DELTA
+                        举手阈值比例(相对躯干高度)，默认0.10
+  --raise-duration RAISE_DURATION
+                        举手持续时间阈值(秒)，默认1.5
+  --raise-vis RAISE_VIS
+                        举手关键点可见性阈值(0-1)，默认0.6
+
+新增行为检测:
+  - 长时间低头: 持续3秒以上
+  - 闭眼: 持续2秒以上
+  - 发呆: 头部静止4秒以上
+
+示例:
+  # 基础用法（保存视频和CSV报告）
+  python ca_gpu.py test.mp4 --save-video
+  
+  # 调整阈值，保存视频
+  python ca_gpu.py test.mp4 --threshold 40 --save-video
+  
+  # 处理前500帧测试
+  python ca_gpu.py test.mp4 --save-video --max-frames 500
+        
+root@autodl-container-2zudkwgkkd-48a5cdd2:~/autodl-tmp# python llm_reporter.py --help
+usage: llm_reporter.py [-h] [--summary SUMMARY] [--csv CSV] [--video VIDEO] [--model MODEL] [--base-url BASE_URL]
+                       [--api-key-env API_KEY_ENV] [--api-key-file API_KEY_FILE] [--max-keyframes MAX_KEYFRAMES]
+                       [--keyframe-dir KEYFRAME_DIR] [--output OUTPUT] [--temperature TEMPERATURE]
+
+Generate a Qwen report from classroom summary and keyframes.
+
+options:
+  -h, --help            show this help message and exit
+  --summary SUMMARY     Structured summary JSON path
+  --csv CSV             Detailed CSV path
+  --video VIDEO         Original video path; falls back to summary metadata
+  --model MODEL         Vision model name (default: qwen3.6-plus)
+  --base-url BASE_URL   DashScope compatible-mode endpoint
+  --api-key-env API_KEY_ENV
+                        Environment variable holding the API key
+  --api-key-file API_KEY_FILE
+                        Local API key file path
+  --max-keyframes MAX_KEYFRAMES
+                        Number of keyframes to send to the model
+  --keyframe-dir KEYFRAME_DIR
+                        Directory to save extracted keyframes
+  --output OUTPUT       Markdown report output path
+  --temperature TEMPERATURE
+                        Generation temperature
+
+---
+
+
+快速运行
+1.基本用法（保存标注视频与 CSV）：
+python ca_gpu.py D:/path/to/classroom.mp4 --save-video
+
+
+提升后排检测（更低阈值 + 更大输入尺寸）
+
+1.远处/小目标更稳的配置：
+python ca_gpu.py D:/path/to/classroom.mp4 --save-video --conf 0.25 --imgsz 1280
+
+2.更激进（显存占用更高）：
+python ca_gpu.py D:/path/to/classroom.mp4 --save-video --conf 0.20 --imgsz 1536 --skip-frames 1
+
+
+使用自定义 ByteTrack 配置
+1.指定你自己的 bytetrack.yaml：
+python ca_gpu.py D:/path/to/classroom.mp4 --save-video --conf 0.25 --imgsz 1280 --tracker d:/smart_classroom/classroom_attention/trackers/bytetrack.yaml
+
+
+CPU 模式（无 GPU）
+python classroom_attention/ca_gpu.py D:/path/to/classroom.mp4 --save-video --device -1 --conf 0.25 --imgsz 1280
+
+
+快速小样测试（前1000帧）
+python classroom_attention/ca_gpu.py D:/path/to/classroom.mp4 --save-video --conf 0.25 --imgsz 1280 --max-frames 1000
+
+
+可选参数说明
+--conf: 检测置信度阈值（0–1，越低召回越高）
+--imgsz: YOLO 输入尺寸（如 1280/1536）
+--skip-frames: 跳帧数（0/1 建议，太大影响跟踪）
+--device: GPU 索引（如 0），CPU 为 -1
+--tracker: 跟踪器配置文件路径
+--no-labels: 只画框不显示文字
+-o/--output: 标注视频输出路径
+--threshold: 专注度阈值（分数低于此判“不专注”）
+
+
+
+Ultralytics 自带内置的 ByteTrack 配置，model.track(...) 会使用该内置文件。你只在“需要自定义阈值/策略”时才需要本地自定义 yaml。
+我已在 ca_gpu.py 中加了回退逻辑：若工作区没有 bytetrack.yaml，会自动定位并使用 Ultralytics 包内置的 cfg/trackers/bytetrack.yaml，并打印所用路径。
+
+代码里的 ByteTrack 使用点
+调用跟踪（含检测+姿态+ByteTrack）: ca_gpu.py:334-343
+关键参数：persist=True（保持轨迹）、tracker=...（配置文件路径）、device=...（GPU/CPU）、imgsz/conf（检测尺寸/阈值）。
+读取轨迹 ID（学生 ID）: ca_gpu.py:352
+box.id 即 ByteTrack 分配的 ID，被作为 student_id 用于状态追踪与报告。
+
+两个文件的工作流差异
+ca_gpu.py: 使用 Ultralytics 集成的 ByteTrack；不要求你本地提供 bytetrack.yaml（已自动回退到内置），读取 box.id 作为学生 ID。
+ca.py: 使用 deep_sort_realtime.DeepSort 进行跟踪（非 ByteTrack），并用 MediaPipe 做姿态；其工作流与 ca_gpu.py 不同。
+
+
+什么时候需要本地 bytetrack.yaml
+需要“自定义跟踪策略”（例如更低的 track_thresh 保留远处小目标、更改 match_thresh 或 track_buffer）时，才提供本地文件，并通过 --tracker your_tracker.yaml 指定。
+验证是否启用跟踪：运行后查看是否打印“使用跟踪器配置: ...”，以及每帧是否存在非零的 track_id。若出现“跟踪未生效”提示，会退化为纯检测（ID=0）。
+
+
+
+解释“跟踪未生效”的含义与触发条件、说明“纯检测”是什么、以及给出如何避免/修复的建议：
+跟踪未生效: yolo.track(...) 返回的每个框 box.id 都是空（未分配轨迹 ID）。在 ca_gpu.py 中我已加诊断提示，一旦发现没有 track_id，会打印“跟踪未生效：未获取 track_id，已按检测模式处理（ID=0）”。
+纯检测: 只做“每帧的目标检测与姿态”，不进行“跨帧的同一目标关联”。结果就是每一帧都能画框/关键点，但无法稳定给同一学生分配持久 ID；代码会把 track_id 设为占位的 0（所有目标都视作 ID=0），后续的“按学生汇总”与“长期行为统计”会明显受影响或被合并到一个 ID。
+ByteTrack的作用: 为跨帧的同一人分配并维护稳定的 track_id，从而支持“学生级别的累计时长/事件次数”等统计。
+
+可能出现“跟踪未生效”的情况
+跟踪器配置不可用: tracker 参数指向的配置不存在或无法加载。现在代码已自动回退到 Ultralytics 包内置的 cfg/trackers/bytetrack.yaml 并打印实际使用路径；如果你的 Ultralytics 安装缺少该配置或版本不支持 track()，会导致无 id。
+Ultralytics 版本或环境问题: 使用的 ultralytics 版本与 torch/opencv 组合不兼容，track() 退化为 predict() 模式（仅检测）。
+视频或参数导致匹配困难:
+跳帧太多（--skip-frames 过大），相邻帧目标变化太大导致难以关联。
+检测阈值/尺寸不合适（--conf 太高或 --imgsz 太小），远处/小目标难以稳定被检测和跟踪。
+画面极密集或遮挡严重，ByteTrack难以维持轨迹。
+
+影响与表现：
+可视化: 框依旧绘制，但标签的 ID: 可能始终为 0 或频繁变化。
+报告: attention_report.csv 中的 student_id 将不可靠（大量为 0），“按学生汇总”与“长期行为”统计（如“长时间低头”）难以准确。
+
+
+
+
+
+--conf 0.20: 更低的检测置信度阈值，扩大召回范围，远处/小目标更容易被检测到，但误检会增多。
+--imgsz 1536: 更大的模型输入尺寸，提升小目标分辨率与检测敏感度；计算量与显存占用显著上升。
+--skip-frames 1: 每处理1帧跳过1帧（代码是“每N+1帧处理1帧”），速度更快但跨帧关联稍弱；若需更稳的跟踪，可改为 --skip-frames 0。
+为什么叫“更激进”
+
+更低阈值 + 更大分辨率 = 更高“召回”策略：尽量不漏检远处学生与弱目标；
+代价：显存/算力消耗更高、速度更慢、误检增加，需要后续用跟踪与行为规则过滤。
+适用场景与建议
+
+场景：后排学生较小、画面分辨率一般、遮挡较多时优先尝试。
+GPU：建议显存 ≥12GB；若显存不够，可降为 --imgsz 1280 或提高 --conf 到 0.25。
+跟踪稳定性：如 ID 抖动或“跟踪未生效”，先把 --skip-frames 调为 0，再调阈值。
+
+
+---
+
+
+python ca_gpu.py classroom.mp4 --save-video --export-json --json-output attention_summary.json
+python llm_reporter.py --summary attention_summary.json --csv attention_report.csv --video classroom.mp4 --model qwen3.6-plus --max-keyframes 6 --output report.md
+
+
+python ca_gpu.py classroom.mp4 --save-video --export-json --json-output attention_summary.json --kpt-vis 0.3 --short-head-down-duration 0.35 --head-down-threshold 0.02 --min-pose-bbox-height 80 --edge-box-margin 1 --min-valid-kpts 3
+
+python webapp.py
